@@ -1,8 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev --turbopack",
+    "build": "node --max-old-space-size=4096 node_modules/next/dist/bin/next build",
+    "dev": "node --max-old-space-size=4096 node_modules/next/dist/bin/next dev --turbopack",
+    "dev:no-turbo": "node --max-old-space-size=4096 node_modules/next/dist/bin/next dev",
     "start": "next start"
   },
   "dependencies": {
